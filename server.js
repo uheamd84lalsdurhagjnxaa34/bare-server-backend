@@ -1,13 +1,8 @@
 import http from "http";
 import { createBareServer } from "@tomphttp/bare-server-node";
 
-// Create Bare server at /bare/
+// Create the Bare server at /bare/
 const bare = createBareServer("/bare/");
-
-// Register versions so Bare knows what to serve
-bare.registerVersion("v1", { language: "NodeJS" });
-bare.registerVersion("v2", { language: "NodeJS" });
-bare.registerVersion("v3", { language: "NodeJS" });
 
 // Create HTTP server
 const server = http.createServer((req, res) => {
